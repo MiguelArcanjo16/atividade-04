@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 01</title>
+</head>
+<body>
+    <script>
+        function verificarLetra() {
+            var letra = document.getElementById('letra').value.toLowerCase();
+
+    
+            if (letra.length === 1 && /[a-z]/i.test(letra)) {
+             
+                if ('aeiou'.includes(letra)) {
+                    alert('A letra ' + letra.toUpperCase() + ' é uma vogal.');
+                } else {
+                    alert('A letra ' + letra.toUpperCase() + ' é uma consoante.');
+                }
+            } else {
+              alert('Por favor, digite apenas uma letra.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Verificar se a letra é uma vogal ou consoante</h1>
+    <label for="letra">Digite uma letra: </label>
+    <input type="text" id="letra" maxlength="1" />
+    <button onclick="verificarLetra()">Verificar</button>
+</body>
+</html>
